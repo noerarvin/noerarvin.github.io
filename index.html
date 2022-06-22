@@ -1,7 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <title>STMIK Komputama MAjenang</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<script language="Javascript">
+	function Login()
+	{
+	var username=document.login.username.value;
+	username=username.toLowerCase();
+	var password=document.login.password.value;
+	password=password.toLowerCase();
+	if (username=="admin" && password=="123456")
+	{location.replace("home.html");
+	alert("Selamat datang di Website Ini");}
+	else
+	{alert("Maaf, Kata Pengguna dan Sandi Salah. Coba lagi");}
+	}
+	
+</script>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="badan-utama">
+        <header>
+            <h2>STMIK Komputama Majenang</h2>
+            <p>Sekolah Tinggi Manajemen Informatika dan Komputer (STMIK) Komputama Majenang</p>
+        </header>
+        <!--
+		<nav class="navigasi">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="lembaga.html">Lembaga</a></li>
+                <li><a href="#struktur">Struktur Organisasi</a></li>
+                <li><a href="#jurusan">Jurusan</a></li>
+                <li><a href="#kegiatan">Kegiatan</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#sarpras">Sarpras</a></li>
+            </ul>
+        </nav>
+		-->
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 5</div>
+				<img src="image/galeri1.png" style="width:100%">
+				</div>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 5</div>
+				<img src="image/galeri2.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 5</div>
+				<img src="image/galeri3.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 5</div>
+				<img src="image/galeri4.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">5 / 5</div>
+				<img src="image/galeri5.png" style="width:100%">
+			</div>
+		</div>
+		<script>
+	let slideIndex = 0;
+	showSlides();
+	function showSlides() {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+		}
+		slideIndex++;
+		if (slideIndex > slides.length){slideIndex = 1}
+		slides[slideIndex-1].style.display = "block";
+		setTimeout(showSlides, 2000);
+		}
+		</script>
+		<div class="menu-kiri">
+            <div class="kotak" align="center">
+                <h3>Silakan Masuk untuk Mengakses Berbagai Menu</h3>
+                <p>Belum punya akun?</p>
+                <a class="tombol tombol-pendaftaran" href="form-daftar.html">Daftar</a>
+            </div>
+        </div>
+        <div class="menu-tengah" align="center">
+            <div class="kotak">
+                <!--start login form-->
+				<table align="center">
+					<tr>
+						<th colspan="2">Selamat Datang</th>
+					</tr>
+					<form name="login" method="post">
+					<tr>
+						<td>Nama Pengguna</td>
+						<td><input type="text" name="username" align="center"></td>
+					</tr>
+					<tr>
+						<td>Kata Sandi</td>
+						<td><input type="password" name="password"></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><input type="button" value="Masuk" onclick="Login()"></td>
+					</tr>
+				 </table>
+				 <!--end login form-->
+            </div>
+        </div>
+        <div class="menu-kanan">
+            <div class="kotak">
+                <h3>Bantuan</h3>
+                <h4 align="center">Kami siap Membantu</h4>
+                <center><p>Whatsapp <a href="https://wa.me/6287829389789">+62 878 2938 9789</a><br/>Senin-Sabtu 08.00 WIB - 15.00 WIB</p></center>
+            </div>
+        </div>
+		<footer>
+		Copyright 2022
+		</footer>
+	</div>
 </body>
 </html>
+
+
+
+
+
+
