@@ -1,0 +1,124 @@
+<!--Arvin 215720010-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STMIK Komputama MAjenang</title>
+    <link rel="stylesheet" href="style.css">
+	<link href="vanilla-calendar-v1.3.2/vanilla-calendar.min.css" rel="stylesheet">
+		<script src="vanilla-calendar-v1.3.2/vanilla-calendar.min.js" defer></script>
+
+		<style>
+			#calendar {
+				width: 230px;
+				font-family: 'Helvetica', 'Arial', sans-serif;
+			}
+		</style>
+</head>
+<body>
+    <div class="badan-utama">
+        <header>
+            <h2>STMIK Komputama Majenang</h2>
+            <p>Sekolah Tinggi Manajemen Informatika dan Komputer (STMIK) Komputama Majenang</p>
+        </header>
+        <nav class="navigasi">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="lembaga.html">Lembaga</a></li>
+                <li><a href="#struktur">Struktur Organisasi</a></li>
+                <li><a href="#jurusan">Jurusan</a></li>
+                <li><a href="#kegiatan">Kegiatan</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#sarpras">Sarpras</a></li>
+            </ul>
+        </nav>
+        <div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 5</div>
+				<img src="image/galeri1.png" style="width:100%">
+				</div>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 5</div>
+				<img src="image/galeri2.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 5</div>
+				<img src="image/galeri3.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 5</div>
+				<img src="image/galeri4.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">5 / 5</div>
+				<img src="image/galeri5.png" style="width:100%">
+			</div>
+		</div>
+		<script>
+	let slideIndex = 0;
+	showSlides();
+	function showSlides() {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+		}
+		slideIndex++;
+		if (slideIndex > slides.length){slideIndex = 1}
+		slides[slideIndex-1].style.display = "block";
+		setTimeout(showSlides, 2000);
+		}
+		</script>
+        <div class="menu-kiri">
+            <div class="kotak">
+                <h3>Pendaftaran</h3>
+                <p>Isi Form Pendaftaran dengan Klik Tombol di bawah ini</p>
+                <a class="tombol tombol-pendaftaran" href="form-daftar.html">Daftar</a>
+            </div>
+        </div>
+        <div class="menu-tengah">
+            <div class="kotak">
+                <h3>STMIK Komputama Majenang</h3>
+                <span class="tanggal-posting">Diposting pada 10.00 WIB, 20 Mei 2022</span>
+                <img src="banner-1.png" alt="PMB STMIK" width="500px" height="250px">
+                <p>STMIK Komputama Majenang merupakan satu-satunya kampus yang ada di wilayah Majenang yang mempunyai IBM (Inkubator Bisnis Mahasiswa)</p>
+                <a class="tombol tombol-lengkap" href="konten.html">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="menu-kanan">
+            <div class="kotak">
+                <h3>Jadwal Buka</h3>
+                <img src="banner-3.png" alt="PMB STMIK" width="230px" height="230px">
+                <h4 align="center">Jadwal Buka</h4>
+                <center><p>Senin-Sabtu 08.00 WIB - 15.00 WIB</p></center>
+            </div>
+            <div class="kotak">
+                <h3>Berita Terbaru</h3>
+                <nav class="menu-artikel">
+                    <ul>
+                        <li><a href="#">Seminar IBM</a></li>
+                        <li><a href="#">Sosialisasi PMB</a></li>
+                        <li><a href="#">OPEK STMIK Komputama Majenang</a></li>
+                        <li><a href="#">Bakti Sosial</a></li>
+                        <li><a href="#">Restrukturisasi STMIK Komputama Majenang</a></li>
+                    </ul>
+                </nav>
+            </div>
+			<div class="kotak">
+				<div id="calendar"></div>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const calendar = new VanillaCalendar({
+					HTMLElement: document.querySelector('#calendar'),
+				});
+				calendar.init();
+			});
+		</script>
+			</div>
+        </div>
+		<footer>
+		Copyright 2022 Arvin Noer Hakim 215720010
+		</footer>
+	</div>
+</body>
+</html>
